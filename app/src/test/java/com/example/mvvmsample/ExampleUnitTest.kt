@@ -1,4 +1,4 @@
-package com.example.android_mvvmsample
+package com.example.mvvmsample
 
 import org.junit.Test
 

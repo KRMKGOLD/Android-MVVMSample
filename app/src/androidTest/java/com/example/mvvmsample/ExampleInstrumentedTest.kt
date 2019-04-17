@@ -1,4 +1,4 @@
-package com.example.android_mvvmsample
+package com.example.mvvmsample
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
