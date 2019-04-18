@@ -1,44 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/tools"
+>
     <data>
-        <import type="android.view.View"/>
+        <import type="android.databinding.ObservableArrayList"/>
+        <import type="com.example.mvvmsample.DataViewModel"/>
+
         <variable name="vm" type="com.example.mvvmsample.MainViewModel"/>
+        <variable name="dataList" type="ObservableArrayList&lt;DataViewModel&gt;"/>
     </data>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-        <EditText
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="name"
-                android:text="@={vm.name}"/>
+                android:layout_height="match_parent"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                bind:item="@{vm.dataList}">
 
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="email"
-                android:inputType="textEmailAddress"
-                android:text="@={vm.email}"/>
+        </android.support.v7.widget.RecyclerView>
 
-        <RatingBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:rating="@{vm.score}"
-                android:stepSize="1"
-                android:onRatingChanged="@{vm.scoreChangeListener}"/>
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:enabled="@{vm.isValid}"
-                android:onClick="@{(view) -> vm.showToast(view)}"
-                android:text="OK"/>
     </LinearLayout>
 
 </layout>
