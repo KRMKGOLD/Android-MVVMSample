@@ -1,5 +1,7 @@
 package com.example.mvvmsample
 
+import android.view.View
+
 interface CallAnotherActivityInterface {
-    fun callActivity()
+    fun callActivity(view : View)
 }
