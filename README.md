@@ -59,7 +59,7 @@
      - [DataBinding(Android Docs)](https://developer.android.com/topic/libraries/data-binding?hl=ko)
      - [RxJava-Study(개인 레포)](https://github.com/KRMKGOLD/RxJava-Study)
      - [LiveData(AAC 번역본)](http://dktfrmaster.blogspot.com/2018/02/livedata.html)
-
+     - [LiveData Study(Jetpack-Study Repo)](https://github.com/KRMKGOLD/Android-Jetpack-Study/tree/master/LiveData)
    
 
 4. 진짜 MVVM으로 개발 시작!!
